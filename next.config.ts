@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  /* All videos are self-hosted in public/videos/ */
 };
 
 export default nextConfig;
