@@ -112,7 +112,7 @@ export function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 1 }}
-        className="relative z-10 pb-20 md:pb-8"
+        className="relative z-10 pb-20 md:pb-24"
       >
         <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 text-text-muted text-xs md:text-sm px-6">
           <div className="flex items-center gap-1.5">
