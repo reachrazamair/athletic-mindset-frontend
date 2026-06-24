@@ -46,7 +46,7 @@ export function HeroSection() {
       </motion.div>
 
       {/* Center: Main content */}
-      <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 lg:px-8">
+      <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 lg:px-8 pt-16 md:pt-20">
         {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -65,7 +65,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="font-display text-[32px] sm:text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] mb-4 md:mb-6 text-center uppercase"
+          className="font-display text-[28px] sm:text-3xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.08] mb-4 md:mb-5 text-center uppercase"
         >
           We Measure Your
           <br />
@@ -77,7 +77,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="mx-auto max-w-md md:max-w-2xl text-[15px] md:text-lg text-text-secondary leading-relaxed mb-7 md:mb-10 text-center"
+          className="mx-auto max-w-md md:max-w-xl text-[14px] md:text-base lg:text-lg text-text-secondary leading-relaxed mb-6 md:mb-8 text-center"
         >
           The only psychologist-engineered assessment that measures{" "}
           <span className="text-text-primary font-medium">22 dimensions</span>{" "}
@@ -93,7 +93,7 @@ export function HeroSection() {
         >
           <Link
             href="#assessment"
-            className="group inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-base md:text-lg font-semibold text-white hover:bg-primary-light transition-all duration-300 hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] hover:scale-[1.02] active:scale-[0.98]"
+            className="group inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm md:text-base font-semibold text-white hover:bg-primary-light transition-all duration-300 hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] hover:scale-[1.02] active:scale-[0.98]"
           >
             Take Free Assessment
             <ArrowRight
