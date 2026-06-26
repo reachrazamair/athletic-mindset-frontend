@@ -51,7 +51,7 @@ export function Navbar() {
           {/* Desktop CTA */}
           <div className="flex items-center gap-4">
             <Link
-              href="#"
+              href="/login"
               className="text-sm text-text-secondary hover:text-text-primary transition-colors"
             >
               Login
