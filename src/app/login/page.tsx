@@ -6,9 +6,11 @@ import { AuthLayout } from "@/components/auth/AuthLayout";
 import { LoginForm } from "@/components/auth/LoginForm";
 import { AuthTransition } from "@/components/auth/AuthTransition";
 import { login } from "@/lib/api";
+import { useAuth } from "@/lib/auth-context";
 
 export default function LoginPage() {
   const router = useRouter();
+  const { login: setSession } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
   const [showTransition, setShowTransition] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -26,9 +28,8 @@ export default function LoginPage() {
     }
 
     if (result.data) {
-      // Store token
-      localStorage.setItem("token", result.data.access_token);
-      localStorage.setItem("user", JSON.stringify(result.data.user));
+      // Store token + sync app-wide auth state
+      setSession(result.data.access_token, result.data.user);
 
       // Show cinematic transition
       setShowTransition(true);

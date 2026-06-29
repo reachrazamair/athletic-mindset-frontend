@@ -6,9 +6,11 @@ import { AuthLayout } from "@/components/auth/AuthLayout";
 import { RoleSelection } from "@/components/auth/RoleSelection";
 import { AuthTransition } from "@/components/auth/AuthTransition";
 import { setRole } from "@/lib/api";
+import { useAuth } from "@/lib/auth-context";
 
 export default function RoleSelectionPage() {
   const router = useRouter();
+  const { refresh } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
   const [showTransition, setShowTransition] = useState(false);
 
@@ -23,8 +25,8 @@ export default function RoleSelectionPage() {
     }
 
     if (result.data) {
-      // Update stored user with new role
-      localStorage.setItem("user", JSON.stringify(result.data));
+      // Sync app-wide auth state with the new role
+      await refresh();
 
       // Show cinematic transition
       setShowTransition(true);
