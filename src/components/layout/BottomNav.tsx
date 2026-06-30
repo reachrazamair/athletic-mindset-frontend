@@ -64,9 +64,16 @@ export function BottomNav() {
     window.location.href = "/";
   };
 
+  const handleHome = () => {
+    setActiveMenu(null);
+    // Full load to home so the intro animation plays, then lands on the page
+    window.location.href = "/";
+  };
+
   // The Account tab links depend on whether the user is logged in.
   const accountSubmenu = isAuthenticated
     ? [
+        { label: "Account settings", href: "/settings" },
         { label: "Take Assessment", href: "#assessment" },
         { label: "Log out", href: "#", action: "logout" as const },
       ]
@@ -159,7 +166,10 @@ export function BottomNav() {
         </AnimatePresence>
 
         {/* Nav bar */}
-        <div className="glass border-t border-border/50 px-6 pb-[env(safe-area-inset-bottom)] pt-2">
+        <div
+          className="glass border-t border-border/50 px-6 pb-[env(safe-area-inset-bottom)] pt-2"
+          style={{ background: "rgba(10, 14, 20, 0.98)" }}
+        >
           <div className="flex items-center justify-around">
             {navItems.map((item) => {
               const Icon = item.icon;
@@ -168,7 +178,15 @@ export function BottomNav() {
               return (
                 <button
                   key={item.label}
-                  onClick={() => handleTap(Boolean(item.submenu), item.label)}
+                  onClick={() => {
+                    if (item.submenu) {
+                      handleTap(true, item.label);
+                    } else if (item.label === "Home") {
+                      handleHome();
+                    } else {
+                      handleTap(false, item.label);
+                    }
+                  }}
                   className="flex flex-col items-center gap-1 py-2 px-3 min-w-[64px] active:scale-95 transition-transform"
                 >
                   <div

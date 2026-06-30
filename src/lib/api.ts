@@ -126,3 +126,23 @@ export async function resendVerification(): Promise<ApiResponse<MessageResponse>
     method: "POST",
   });
 }
+
+export async function updateProfile(
+  firstName: string,
+  lastName: string,
+): Promise<ApiResponse<User>> {
+  return request<User>("/auth/me", {
+    method: "PATCH",
+    body: JSON.stringify({ first_name: firstName, last_name: lastName }),
+  });
+}
+
+export async function changePassword(
+  currentPassword: string,
+  newPassword: string,
+): Promise<ApiResponse<MessageResponse>> {
+  return request<MessageResponse>("/auth/change-password", {
+    method: "POST",
+    body: JSON.stringify({ current_password: currentPassword, new_password: newPassword }),
+  });
+}

@@ -23,6 +23,7 @@ interface AuthContextValue {
   isAuthenticated: boolean;
   login: (token: string, user: User) => void;
   logout: () => void;
+  updateUser: (user: User) => void;
   refresh: () => Promise<void>;
 }
 
@@ -87,6 +88,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     setUser(null);
   }, []);
 
+  // Update the cached user after a profile change (no extra network call).
+  const updateUser = useCallback((nextUser: User) => {
+    localStorage.setItem(USER_KEY, JSON.stringify(nextUser));
+    setUser(nextUser);
+  }, []);
+
   return (
     <AuthContext.Provider
       value={{
@@ -95,6 +102,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         isAuthenticated: user !== null,
         login,
         logout,
+        updateUser,
         refresh,
       }}
     >

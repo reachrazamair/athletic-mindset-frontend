@@ -9,7 +9,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { LogOut, BarChart3, ChevronDown } from "lucide-react";
+import { LogOut, BarChart3, ChevronDown, Settings } from "lucide-react";
 import Link from "next/link";
 import { useAuth } from "@/lib/auth-context";
 import { displayName, initials } from "@/lib/user-display";
@@ -97,6 +97,15 @@ export function ProfileMenu() {
 
             {/* Actions */}
             <div className="p-2">
+              <Link
+                href="/settings"
+                onClick={() => setOpen(false)}
+                role="menuitem"
+                className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm text-text-secondary hover:text-text-primary hover:bg-surface-card/80 transition-all"
+              >
+                <Settings size={17} className="text-text-muted" />
+                Account settings
+              </Link>
               <Link
                 href="#assessment"
                 onClick={() => setOpen(false)}
