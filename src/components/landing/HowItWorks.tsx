@@ -83,7 +83,7 @@ export function HowItWorks() {
           </div>
 
           {/* Mobile vertical line */}
-          <div className="md:hidden absolute top-8 bottom-8 left-8 w-px">
+          <div className="md:hidden absolute top-8 bottom-8 left-7 w-px">
             <motion.div
               initial={{ scaleY: 0 }}
               animate={isInView ? { scaleY: 1 } : {}}
@@ -101,10 +101,10 @@ export function HowItWorks() {
                   initial={{ opacity: 0, y: 50 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.3 + index * 0.18 }}
-                  className="relative md:text-center group flex md:flex-col items-start md:items-center gap-5 md:gap-0 pl-16 md:pl-0"
+                  className="relative md:text-center group flex md:flex-col items-start md:items-center gap-5 md:gap-0 pl-20 md:pl-0"
                 >
                   {/* Step Icon */}
-                  <div className="relative inline-flex flex-col items-center md:mb-7 absolute left-0 md:relative">
+                  <div className="absolute left-0 top-0 md:relative inline-flex flex-col items-center md:mb-7">
                     <motion.div
                       whileHover={{ scale: 1.08 }}
                       transition={{ type: "spring", stiffness: 400, damping: 15 }}

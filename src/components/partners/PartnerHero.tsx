@@ -112,25 +112,25 @@ export function PartnerHero() {
         transition={{ duration: 0.8, delay: 1 }}
         className="relative z-10 pb-20 md:pb-24"
       >
-        <div className="flex items-center justify-center gap-6 md:gap-12 text-center px-6">
-          <div>
-            <p className="text-xl md:text-2xl font-bold text-text-primary">30%+</p>
-            <p className="text-[10px] md:text-xs text-text-muted">Rev Share</p>
+        <div className="flex items-start justify-center gap-3 sm:gap-8 md:gap-12 text-center px-6">
+          <div className="flex-1 min-w-0">
+            <p className="text-xl md:text-2xl font-bold text-text-primary leading-tight">30%+</p>
+            <p className="mt-1 text-[10px] md:text-xs text-text-muted">Rev Share</p>
           </div>
-          <div className="h-8 w-px bg-border-light" />
-          <div>
-            <p className="text-xl md:text-2xl font-bold text-text-primary">$0</p>
-            <p className="text-[10px] md:text-xs text-text-muted">Upfront Cost</p>
+          <div className="h-8 w-px shrink-0 bg-border-light" />
+          <div className="flex-1 min-w-0">
+            <p className="text-xl md:text-2xl font-bold text-text-primary leading-tight">$0</p>
+            <p className="mt-1 text-[10px] md:text-xs text-text-muted">Upfront Cost</p>
           </div>
-          <div className="h-8 w-px bg-border-light" />
-          <div>
-            <p className="text-xl md:text-2xl font-bold text-text-primary">Monthly</p>
-            <p className="text-[10px] md:text-xs text-text-muted">Payouts</p>
+          <div className="h-8 w-px shrink-0 bg-border-light" />
+          <div className="flex-1 min-w-0">
+            <p className="text-xl md:text-2xl font-bold text-text-primary leading-tight">Monthly</p>
+            <p className="mt-1 text-[10px] md:text-xs text-text-muted">Payouts</p>
           </div>
-          <div className="h-8 w-px bg-border-light" />
-          <div>
-            <p className="text-xl md:text-2xl font-bold text-text-primary">Forever</p>
-            <p className="text-[10px] md:text-xs text-text-muted">Recurring</p>
+          <div className="h-8 w-px shrink-0 bg-border-light" />
+          <div className="flex-1 min-w-0">
+            <p className="text-xl md:text-2xl font-bold text-text-primary leading-tight">Forever</p>
+            <p className="mt-1 text-[10px] md:text-xs text-text-muted">Recurring</p>
           </div>
         </div>
       </motion.div>

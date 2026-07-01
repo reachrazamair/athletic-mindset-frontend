@@ -25,6 +25,7 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: clip;
   }
 
   body {
@@ -33,6 +34,9 @@
     font-feature-settings: "rlig" 1, "calt" 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /* Guard against horizontal scroll from off-screen entrance animations.
+       'clip' clips without creating a scroll container, so fixed navs stay put. */
+    overflow-x: clip;
   }
 
   ::selection {

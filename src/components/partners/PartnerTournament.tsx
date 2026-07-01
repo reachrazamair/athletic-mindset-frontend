@@ -14,7 +14,7 @@ export function PartnerTournament() {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="relative py-20 md:py-28" ref={ref}>
+    <section className="relative py-20 md:py-28 overflow-hidden" ref={ref}>
       <div className="absolute inset-0 bg-gradient-to-b from-surface via-surface-light/30 to-surface" />
 
       <div className="relative mx-auto max-w-7xl px-5 md:px-6 lg:px-8">

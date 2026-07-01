@@ -114,7 +114,10 @@ export function BottomNav() {
       </AnimatePresence>
 
       {/* Bottom Navigation - mobile only */}
-      <nav className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
+      <nav
+        className="fixed bottom-0 left-0 right-0 z-50 md:hidden"
+        style={{ transform: "translateZ(0)", willChange: "transform" }}
+      >
         {/* Submenu panel */}
         <AnimatePresence>
           {activeMenu && activeItem?.submenu && (
@@ -123,7 +126,8 @@ export function BottomNav() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.2 }}
-              className="mx-4 mb-2 rounded-2xl glass border border-border/50 overflow-hidden"
+              className="mx-4 mb-2 rounded-2xl glass border border-border/50 overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.5)]"
+              style={{ background: "rgba(13, 17, 23, 0.98)" }}
             >
               {/* Logged-in profile header on the Account tab */}
               {activeMenu === "Account" && isAuthenticated && user && (
@@ -138,7 +142,7 @@ export function BottomNav() {
                 </div>
               )}
 
-              <div className="p-3 space-y-1">
+              <div className="p-2 divide-y divide-white/[0.06]">
                 {activeItem.submenu.map((sub) =>
                   "action" in sub && sub.action === "logout" ? (
                     <button

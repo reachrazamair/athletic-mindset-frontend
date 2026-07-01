@@ -2,47 +2,46 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { UserPlus, Link2, Share2, Wallet } from "lucide-react";
+import { Send, ClipboardCheck, FileText, Trophy } from "lucide-react";
 
 const steps = [
   {
-    icon: UserPlus,
+    icon: Send,
     step: "01",
-    title: "Sign Up Free",
+    title: "Invite Your Roster",
     description:
-      "Create your partner account in 60 seconds. No approval required. No credit card. No upfront cost.",
+      "Send one link to your team. Each athlete completes the 15-minute assessment on their own phone.",
   },
   {
-    icon: Link2,
+    icon: ClipboardCheck,
     step: "02",
-    title: "Get Your Link & QR",
+    title: "Athletes Get Assessed",
     description:
-      "Receive your unique referral link and downloadable QR code instantly. Share it any way you want.",
+      "The psychologist-engineered assessment scores each athlete across 22 dimensions of their mental game.",
   },
   {
-    icon: Share2,
+    icon: FileText,
     step: "03",
-    title: "Share With Your Athletes",
+    title: "You Get the Reports",
     description:
-      "Text it to your team, post it at practice, or hand out printed QR codes at tournaments. One link does it all.",
+      "Receive a coach report for every athlete plus a team report — insights, not raw numbers.",
   },
   {
-    icon: Wallet,
+    icon: Trophy,
     step: "04",
-    title: "Earn Every Month",
+    title: "Coach the Mental Game",
     description:
-      "Earn 30–40% of every athlete subscription — automatically deposited via Stripe.",
+      "Use the plans to develop each athlete and strengthen your team's culture all season long.",
   },
 ];
 
-export function PartnerHowItWorks() {
+export function CoachHowItWorks() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
     <section className="relative py-20 md:py-28" ref={ref}>
       <div className="relative mx-auto max-w-7xl px-5 md:px-6 lg:px-8">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -53,16 +52,15 @@ export function PartnerHowItWorks() {
             How It Works
           </span>
           <h2 className="font-display text-2xl md:text-5xl font-black mb-4 md:mb-6 uppercase tracking-tight">
-            From Zero to{" "}
-            <span className="gradient-text">Earning in 3 Minutes</span>
+            Mental Readiness,{" "}
+            <span className="gradient-text">Without the Extra Hours</span>
           </h2>
           <p className="text-text-secondary max-w-xl mx-auto text-sm md:text-lg">
-            No sales pitch. No long onboarding. Sign up, share your link, and
-            start earning when your athletes subscribe.
+            No new software to learn and no hours added to your week. Invite your
+            team and let the reports do the heavy lifting.
           </p>
         </motion.div>
 
-        {/* Steps */}
         <div className="relative">
           {/* Connector — horizontal draw on desktop */}
           <div className="hidden lg:block absolute top-8 left-[12.5%] right-[12.5%] h-[2px] -translate-y-1/2 z-0 pointer-events-none">
