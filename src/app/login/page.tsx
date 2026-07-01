@@ -45,13 +45,18 @@ function LoginInner() {
       // Show cinematic transition
       setShowTransition(true);
 
-      // Route based on roles
+      // Route based on roles + onboarding state
       const roles = user.roles.map((r) => r.role);
+      const isAthlete = roles.includes("athlete");
+      const hasProfile = Boolean(user.athlete_profile?.primary_sport);
 
       setTimeout(() => {
         if (roles.length === 0) {
           // No role yet — send to role selection
           router.push("/signup/role");
+        } else if (isAthlete && !hasProfile) {
+          // Athlete hasn't completed demographic onboarding yet
+          router.push("/signup/profile");
         } else {
           // Has roles — go home for now (dashboards come later)
           router.push("/");

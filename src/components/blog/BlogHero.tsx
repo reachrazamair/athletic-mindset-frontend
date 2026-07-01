@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { LazyVideo } from "@/components/LazyVideo";
+import { LazyVideo } from "@/components/common/LazyVideo";
 
 export function BlogHero() {
   return (

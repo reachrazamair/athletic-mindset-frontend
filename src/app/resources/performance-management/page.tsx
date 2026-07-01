@@ -3,7 +3,7 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { BottomNav } from "@/components/layout/BottomNav";
 import { Footer } from "@/components/layout/Footer";
-import { LazyVideo } from "@/components/LazyVideo";
+import { LazyVideo } from "@/components/common/LazyVideo";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import {
@@ -13,7 +13,6 @@ import {
   Zap,
   Brain,
   Target,
-  Users,
   BarChart3,
   Eye,
   Lightbulb,

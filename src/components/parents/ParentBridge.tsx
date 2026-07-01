@@ -3,7 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { CheckCircle2 } from "lucide-react";
-import { LazyVideo } from "@/components/LazyVideo";
+import { LazyVideo } from "@/components/common/LazyVideo";
 
 const points = [
   "Shift the car-ride-home conversation from critiquing errors to supporting their mental approach",

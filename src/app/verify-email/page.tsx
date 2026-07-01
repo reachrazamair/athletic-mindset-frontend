@@ -167,7 +167,7 @@ function CheckEmailPrompt() {
         <MailCheck size={26} className="text-primary-light" />
       </motion.span>
 
-      <h1 className="text-xl font-semibold text-text-primary mb-2">Check your email</h1>
+      <h1 className="text-xl font-semibold text-text-primary mb-2 mt-8">Check your MailBox!</h1>
       <p className="text-sm text-text-muted">
         We sent a verification link to{" "}
         <span className="text-text-secondary font-medium">{user.email}</span>. Click it to confirm your

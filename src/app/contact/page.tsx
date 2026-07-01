@@ -3,7 +3,7 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { BottomNav } from "@/components/layout/BottomNav";
 import { Footer } from "@/components/layout/Footer";
-import { LazyVideo } from "@/components/LazyVideo";
+import { LazyVideo } from "@/components/common/LazyVideo";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import {
@@ -11,11 +11,8 @@ import {
   MapPin,
   Send,
   CheckCircle2,
-  Users,
   Clock,
-  ArrowRight,
 } from "lucide-react";
-import Link from "next/link";
 
 const reasonOptions = [
   "I want to learn more about the assessment",

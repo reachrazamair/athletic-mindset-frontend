@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { LazyVideo } from "@/components/LazyVideo";
+import { LazyVideo } from "@/components/common/LazyVideo";
 
 export function PartnerCTA() {
   const ref = useRef(null);

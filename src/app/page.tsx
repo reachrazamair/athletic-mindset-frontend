@@ -13,7 +13,7 @@ import { SolutionsFor } from "@/components/landing/SolutionsFor";
 import { Testimonials } from "@/components/landing/Testimonials";
 import { CTASection } from "@/components/landing/CTA";
 import { Footer } from "@/components/layout/Footer";
-import { IntroAnimation } from "@/components/IntroAnimation";
+import { IntroAnimation } from "@/components/common/IntroAnimation";
 
 export default function Home() {
   const [showIntro, setShowIntro] = useState(true);

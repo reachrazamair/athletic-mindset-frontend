@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Eye, EyeOff, ArrowRight, Loader2 } from "lucide-react";
-import { FieldHint } from "@/components/auth/FieldHint";
+import { FieldHint } from "@/components/common/FieldHint";
 import { isValidPassword, MIN_PASSWORD_LENGTH } from "@/lib/validation";
 
 interface ResetPasswordFormProps {

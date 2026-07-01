@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight, Lock } from "lucide-react";
 import Link from "next/link";
-import { LazyVideo } from "@/components/LazyVideo";
+import { LazyVideo } from "@/components/common/LazyVideo";
 
 const sampleScores = [
   { label: "Mental Toughness", score: 68, band: "High" },

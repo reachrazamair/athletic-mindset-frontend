@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Eye, EyeOff, Check, Loader2 } from "lucide-react";
 import { changePassword } from "@/lib/api";
-import { FieldHint } from "@/components/auth/FieldHint";
+import { FieldHint } from "@/components/common/FieldHint";
 import { isValidPassword, MIN_PASSWORD_LENGTH } from "@/lib/validation";
 import { SettingsCard } from "@/components/settings/SettingsCard";
 

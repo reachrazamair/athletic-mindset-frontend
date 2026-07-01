@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { ArrowRight, Loader2 } from "lucide-react";
 import Link from "next/link";
-import { FieldHint } from "@/components/auth/FieldHint";
+import { FieldHint } from "@/components/common/FieldHint";
 import { isValidEmail } from "@/lib/validation";
 
 interface ForgotPasswordFormProps {

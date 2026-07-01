@@ -3,15 +3,19 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import { Loader2, UserCog } from "lucide-react";
+import { Loader2, UserCog, UserCircle } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { BottomNav } from "@/components/layout/BottomNav";
 import { AccountTab } from "@/components/settings/AccountTab";
+import { ProfileTab } from "@/components/settings/ProfileTab";
 import { useAuth } from "@/lib/auth-context";
 
-// Settings tabs. Just one for now — structured so more can be added later
-// (e.g. Notifications, Billing, Privacy) without touching the layout.
-const TABS = [{ id: "account", label: "Account", icon: UserCog }] as const;
+// Settings tabs. Structured so more can be added later (Notifications, Billing…)
+// without touching the layout.
+const TABS = [
+  { id: "account", label: "Account", icon: UserCog },
+  { id: "profile", label: "Profile", icon: UserCircle },
+] as const;
 
 type TabId = (typeof TABS)[number]["id"];
 
@@ -76,6 +80,7 @@ export default function SettingsPage() {
             {/* Tab content */}
             <div className="flex-1 min-w-0">
               {activeTab === "account" && <AccountTab />}
+              {activeTab === "profile" && <ProfileTab />}
             </div>
           </div>
         </div>

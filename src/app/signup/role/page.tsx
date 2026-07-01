@@ -32,7 +32,12 @@ export default function RoleSelectionPage() {
       setShowTransition(true);
 
       setTimeout(() => {
-        router.push("/");
+        // Athletes continue to demographic onboarding; others go home.
+        if (role === "athlete") {
+          router.push("/signup/profile");
+        } else {
+          router.push("/");
+        }
       }, 2500);
     }
   };

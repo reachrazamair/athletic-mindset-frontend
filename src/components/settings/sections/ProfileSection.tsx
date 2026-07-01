@@ -43,7 +43,7 @@ export function ProfileSection() {
   };
 
   return (
-    <SettingsCard title="Profile" description="Your name as it appears across Athletic Mindset.">
+    <SettingsCard title="Profile Name" description="Your name as it appears across Athletic Mindset.">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label htmlFor="set-first" className="block text-sm font-medium text-text-secondary mb-2">

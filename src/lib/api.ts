@@ -67,6 +67,15 @@ export interface UserRole {
   created_at: string;
 }
 
+export interface AthleteProfile {
+  birth_date: string | null;
+  sex: string | null;
+  ethnicity: string | null;
+  primary_sport: string | null;
+  competition_level: string | null;
+  position: string | null;
+}
+
 export interface User {
   id: string;
   email: string;
@@ -75,6 +84,7 @@ export interface User {
   is_active: boolean;
   is_verified: boolean;
   roles: UserRole[];
+  athlete_profile: AthleteProfile | null;
   created_at: string;
 }
 
@@ -171,5 +181,18 @@ export async function changePassword(
   return request<MessageResponse>("/auth/change-password", {
     method: "POST",
     body: JSON.stringify({ current_password: currentPassword, new_password: newPassword }),
+  });
+}
+
+export async function getProfile(): Promise<ApiResponse<AthleteProfile>> {
+  return request<AthleteProfile>("/profile");
+}
+
+export async function updateAthleteProfile(
+  profile: Partial<AthleteProfile>,
+): Promise<ApiResponse<AthleteProfile>> {
+  return request<AthleteProfile>("/profile", {
+    method: "PUT",
+    body: JSON.stringify(profile),
   });
 }

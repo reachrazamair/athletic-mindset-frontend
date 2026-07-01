@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { LazyVideo } from "@/components/LazyVideo";
+import { LazyVideo } from "@/components/common/LazyVideo";
 
 const tournamentStats = [
   { label: "Regional Tournament", teams: "50 teams", athletes: "750 athletes", revenue: "$1,839/month approx." },
